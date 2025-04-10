@@ -1,3 +1,4 @@
+/* === Base === */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
@@ -5,7 +6,8 @@ body {
   color: #333;
 }
 
-header {
+/* === Header === */
+header, .header {
   text-align: center;
   padding: 2rem 1rem;
   background: linear-gradient(135deg, #e6f4f9, #ffffff);
@@ -13,41 +15,74 @@ header {
   border-bottom-right-radius: 50px;
 }
 
-header img {
-  width: 160px;
-  border-radius: 100%;
+header img, .header img {
+  width: 140px;
+  border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-  margin: 1rem 0 0.2rem;
+header h1, .header h1 {
   font-size: 2rem;
-}
-
-header p {
-  margin: 0;
-  font-size: 1.1rem;
-  color: #666;
-}
-
-.nav-links {
   margin-top: 1rem;
 }
 
+header p {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+/* === Nav Links === */
+.nav-links {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
 .nav-links a {
-  margin: 0 10px;
   color: #0077aa;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  background: #e9f6fc;
+  padding: 0.5rem 1rem;
   border-radius: 10px;
-  padding: 0.3rem 0.8rem;
-  transition: background 0.3s;
+  transition: background 0.3s ease;
 }
 
 .nav-links a:hover {
   background: #d3ecf5;
 }
 
+/* === Button CTA === */
+.cta-button, .whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1rem;
+  padding: 0.9rem 1.6rem;
+  background: #25D366;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover, .whatsapp-button:hover {
+  background: #1ebe5d;
+}
+
+.whatsapp-button img {
+  width: 22px;
+  height: 22px;
+}
+
+/* === Section === */
 .section {
   padding: 2rem 1rem;
 }
@@ -58,6 +93,7 @@ header p {
   margin-bottom: 2rem;
 }
 
+/* === Grid Gallery === */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -84,34 +120,55 @@ header p {
   color: #444;
 }
 
-.contact {
+/* === Contact Card === */
+.contact-info, .contact-form {
+  max-width: 500px;
+  margin: 3rem auto;
+  background: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 24px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
   text-align: center;
-  padding: 2rem 1rem;
-  background: #d9f0fa;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
 }
 
-.contact h3 {
-  font-size: 1.5rem;
+.contact-info p {
+  font-size: 1.05rem;
+  color: #444;
+  margin: 0.6rem 0;
 }
 
-.contact p {
-  margin: 0.5rem 0;
-}
-
-.cta-button {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.7rem 1.5rem;
-  background: #00aaff;
-  color: #fff;
-  border-radius: 25px;
+.contact-info a {
+  color: #0077aa;
   text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
+  font-weight: 600;
 }
 
-.cta-button:hover {
-  background: #0088cc;
+/* === Media Queries === */
+@media (max-width: 600px) {
+  header img {
+    width: 110px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .cta-button, .whatsapp-button {
+    font-size: 1rem;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .contact-info {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
 }
