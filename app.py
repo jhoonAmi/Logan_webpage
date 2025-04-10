@@ -19,9 +19,6 @@ app.config['MAIL_DEFAULT_SENDER'] = ('Pressure Washing Solutions', os.getenv('MA
 
 mail = Mail(app)
 
-@app.route('/googleafe353ea0ce608fd.html')
-def root():
-    return render_template('googleafe353ea0ce608fd.html')
 
 @app.route('/')
 def home():
