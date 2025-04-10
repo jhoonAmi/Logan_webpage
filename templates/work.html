@@ -1,34 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>See Our Work</title>
-  <link rel="stylesheet" href="/static/styles.css">
+  <link rel="stylesheet" href="/static/styles.css" />
 </head>
 <body>
+
+  <!-- Header + Nav -->
   <header>
-    <img src="/static/WhatsApp Image 2025-04-08 at 11.32.06.jpeg" alt="Logo" />
-    <h1>Our Work</h1>
-    <nav class="nav-links">
-      <a href="/">Home</a>
-      <a href="/contact">Contact</a>
-      <a href="/work">See Our Work</a>
-    </nav>
+    <div class="nav-container">
+      <div class="logo-area">
+        <img src="/static/WhatsApp Image 2025-04-08 at 11.32.06.jpeg" alt="Logo" />
+        <h1>Our Work</h1>
+      </div>
+      <div class="hamburger" onclick="toggleSidebar()">☰</div>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/contact">Contact</a>
+        <a href="/work">See Our Work</a>
+      </nav>
+    </div>
   </header>
 
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="toggleSidebar()">×</a>
+    <a href="/">Home</a>
+    <a href="/contact">Contact</a>
+    <a href="/work">See Our Work</a>
+  </div>
+
+  <!-- Work Gallery -->
   <section class="section">
     <h2>Before & After Gallery</h2>
     <div class="grid">
-      <div class="card"><img src="/static/WhatsApp Image 2025-04-08 at 11.32.07.jpeg" alt="Roof Before/After"><p>Roof Transformation</p></div>
-      <div class="card"><img src="/static/WhatsApp Image 2025-04-08 at 11.32.06 (1).jpeg" alt="Steps Before/After"><p>Steps Cleaned to Perfection</p></div>
+      <div class="card"><img src="/static/WhatsApp Image 2025-04-08 at 11.32.07.jpeg" alt="Roof"><p>Roof Transformation</p></div>
+      <div class="card"><img src="/static/WhatsApp Image 2025-04-08 at 11.32.06 (1).jpeg" alt="Steps"><p>Steps Cleaned</p></div>
       <div class="card"><img src="/static/WhatsApp Image 2025-04-08 at 11.32.10 (1).jpeg" alt="Deck Before"><p>Deck - Before</p></div>
       <div class="card"><img src="/static/WhatsApp Image 2025-04-08 at 11.32.11.jpeg" alt="Deck After"><p>Deck - After</p></div>
-      <div class="card"><img src="/static/WhatsApp Image 2025-04-08 at 11.32.08.jpeg" alt="Stone Dirty"><p>Stonework - Before</p></div>
-      <div class="card"><img src="/static/WhatsApp Image 2025-04-08 at 11.32.10.jpeg" alt="Stone Clean"><p>Stonework - After</p></div>
+      <div class="card"><img src="/static/WhatsApp Image 2025-04-08 at 11.32.08.jpeg" alt="Stone Before"><p>Stonework - Before</p></div>
+      <div class="card"><img src="/static/WhatsApp Image 2025-04-08 at 11.32.10.jpeg" alt="Stone After"><p>Stonework - After</p></div>
       <div class="card"><img src="/static/WhatsApp Image 2025-04-08 at 11.32.11 (1).jpeg" alt="Solar Dirty"><p>Solar Panel - Before</p></div>
       <div class="card"><img src="/static/WhatsApp Image 2025-04-08 at 11.32.11 (2).jpeg" alt="Solar Clean"><p>Solar Panel - After</p></div>
     </div>
   </section>
+
+  <!-- Sidebar Toggle Script -->
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("active");
+    }
+  </script>
+
 </body>
 </html>
